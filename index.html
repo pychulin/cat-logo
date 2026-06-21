@@ -18,9 +18,7 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
 <img id="Sagrada Madre" src="s1.jpg" width="200">
 <button onclick="cambiarImagen(1)">➡️</button>
 <p>Precio: $3000</p>
-const aromas = [{nombre: "Palo Santo",imagen: "s1.jpg"},{nombre: "Palo Santo con Copal",imagen: "s2.jpg"},{nombre: "Palo Santo con Fresias",imagen: "s3.jpg"},{nombre: "Palo Santo con Ruda",imagen: "s4.jpg"}, {nombre: "Palo Santo con Sándalo",imagen: "s5.jpg"} {nombre: "Palo Santo con Violetas",imagen: "s6.jpg"} {nombre: "Palo Santo con Yagra",imagen: "s7.jpg"} {nombre: "Palo Santo con Lavanda",imagen: "s8.jpg"} {nombre: "Palo Santo con Rosas",imagen: "s9.jpg"}{nombre: "Palo Santo con Jazmín",imagen: "s10.jpg"} {nombre: "Palo Santo con Vainilla",imagen: "s11.jpg"}{nombre: "Palo Santo con Mirra",imagen: "s12.jpg"}{nombre: "Palo Santo con Champa",imagen: "s13.jpg"}{nombre: "Palo Santo con Salvia",imagen: "s14.jpg"}
 <label for="aroma">Elegí tu aroma:</label>
-
 <select id="aroma">
   <option> Palo Santo</option></option>
   <option>Palo Santo con Copal</option>
@@ -46,9 +44,7 @@ Agregar al carrito
 <button onclick="cambiarImagen(-1)">⬅️</button>
 <img id="Ámbar" src="am1.jpg" width="200">
 <button onclick="cambiarImagen(1)">➡️</button>  
- const aromas = [{nombre: "Mirra",imagen: "am1.jpg"},{nombre: "Dragon's Blood",imagen: "am2.jpg"},{nombre: "Sándalo Canela",imagen: "am3.jpg"}
  <label for="aroma">Elegí tu aroma:</label>
-
 <select id="Ámbar">
   <option> Mirra</option> </option>
   <option> Dragon´s Blood</option>
@@ -73,9 +69,7 @@ Agregar al carrit0
 <button onclick="cambiarImagen(-1)">⬅️</button>
 <img id="imagenSahumerio" src="largo1.jpg" width="200">
 <button onclick="cambiarImagen(1)">➡️</button> 
-const aromas = [{nombre: "Bendición de Dinero",imagen: "largo1.jpg"},{nombre: "Frank y Mirra",imagen: "largo2.jpg"},,{nombre: "Rosa Roja",imagen: "largo3.jpg"} 
  <label for="aroma">Elegí tu aroma:</label>
-
 <select id="Aroma Fusión">
   <option> Bendición de Dinero</option> </option>
   <option> Frank y Mirra</option>
@@ -87,6 +81,7 @@ Agregar al carrit0
 
  <div class="producto">
 <h2>Bombita de Defumación Sagrada Madre x4</h2>
+ <label for="aroma">Elegí tu aroma:</label> 
 <img src="b1.jpg"width="200">
 <img src="b2.jpg"width="200"> 
 <img src="b3.jpg"width="200"> 
@@ -96,10 +91,18 @@ Agregar al carrit0
 <img src="b7.jpg"width="200"> 
 <img src="b8.jpg"width="200"> 
 <img src="b9.jpg" width="200">
+ <label for="aroma">Elegí tu aroma:</label>
+<select id="aroma">
+  <option> Abundancia Infinita</option></option>
+  <option>Palo Santo con Copal</option>
+  <option>Abre Caminos</option>
+  <option>Atracción Mística</option>
+  <option>7 Poderes</option>
+ <option>Atrae Dinero</option>
+ <option>Defumación Completa</option>
+</select>  
+<button onclick="agregarSahumerio()"> 
 <p>Precio: $2500</p>
-<button onclick="addToCart('Bombita de Defumación Sagrada Madre x4', 2500)">
-Agregar al carrito
-</button> 
 
 <div class="producto"> 
 <h2>Conitos para Cascada de Humo x100</h2>
@@ -147,7 +150,15 @@ Agregar al carrito
 <h2>Velitas</h2>
 <img src="velita1.jpg" width="200">
 <img src="velita2.jpg" width="200"> 
-<img src="velita3.jpg" width="200">  
+<img src="velita3.jpg" width="200"> 
+ <label for="aroma">Elegí tu aroma:</label>
+<select id="aroma">
+  <option>Sándalo</option></option>
+  <option>Noche de Ensueños</option>
+  <option>Palo Santo con Fresias</option>
+  <option>Dulces Frutillas</option>
+</select>  
+<button onclick="agregarSahumerio()">
 <p>Precio: $2000</p>
 <button onclick="addToCart('Velitas', 2000)">
 Agregar al carrito
@@ -174,10 +185,14 @@ Agregar al carrito
 <img src="a1.jpg"width="200"> 
 <img src="a2.jpg"width="200"> 
 <img src="a3.jpg" width="200">
+ <label for="aroma">Elegí tu aroma:</label>
+<select id="aroma">
+  <option>Energía Angelical</option></option>
+  <option>Prosperidad y Abundancia</option>
+  <option>Regenerador de Aura</option>
+</select>  
+<button onclick="agregarSahumerio()">
 <p>Precio: $2500</p>
-<button onclick="addToCart('Rocío Áurico Alquimia', 2500)">
-Agregar al carrito
-</button>
 
 <div class="producto">
 <h2>Rocío Áurico Buena Energía </h2>
@@ -190,16 +205,31 @@ Agregar al carrito
 <img src="pish7.jpg"width="200"> 
 <img src="pish8.jpg"width="200">
 <img src="pish9.jpg" width="200">
+<label for="aroma">Elegí tu aroma:</label>
+<select id="aroma">
+  <option> Protección Energética</option></option>
+  <option>Regenerador de Aura</option>
+  <option>Atracción</option>
+  <option>Energía Angelical</option>
+  <option>Prosperidad</option>
+ <option>Armonizador de Chakras</option>
+</select>  
+<button onclick="agregarSahumerio()"> 
 <p>Precio: $3500</p>
-<button onclick="addToCart('Rocío Áurico Buena Energía', 3500)">
-Agregar al carrito
-</button>
+
 
 <div class="producto">
 <h2>Aromatizante Aero Soft</h2>
 <img src="aero1.jpg"width="200"> 
 <img src="aero2.jpg"width="200"> 
 <img src="aero.jpg" witdh="200">
+ <label for="aroma">Elegí tu aroma:</label>
+<select id="aroma">
+  <option> Noche de Vainilla</option></option>
+  <option>Misterio Dorado</option>
+  <option>Ritual de Oriente</option>
+</select>  
+<button onclick="agregarSahumerio()">
 <p>Precio: $12000 </p>
 <button onclick="addToCart('Aromatizante Aero Soft', 12000)">
 Agregar al carrito
