@@ -1,7 +1,5 @@
 <script>
-function toggleCart() {
-document.getElementById("cart").classList.toggle("open");
-document.getElementById("overlay").classList.toggle("show");}<div id="overlay" onclick="toggleCart()"></div> </body>
+function toggleCart() {document.getElementById("cart").classList.toggle("open");document.getElementById("overlay").classList.toggle("show");}<div id="overlay" onclick="toggleCart()"></div> </body>
 <body>
 <header class="header">
 <h1>Mi Tienda</h1>
@@ -18,7 +16,6 @@ document.getElementById("overlay").classList.toggle("show");}<div id="overlay" o
 <button onclick="addToCart('Sahumerio Sagrada Madre x8', 3.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -27,7 +24,6 @@ Agregar al carrito
 <button onclick="addToCart('Sahumerio Ámbar x20', 2.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div> 
 <img src="sahumerio.jpg" width="200">
@@ -36,7 +32,7 @@ Agregar al carrito
 <button onclick="addToCart('Sahumerio Surtido x50', 6.000)">
 Agregar al carrit0
 </button>
-</div>
+
 
 <div class="producto"> <div id="cart"> </div> 
 <img src="
@@ -46,7 +42,6 @@ sahumeriolargo""" width="200">
 <button onclick="addToCart('Sahumerio Largoo Aroma Fusión x10' 6.500)">
 Agregar al carrit0
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -55,7 +50,6 @@ Agregar al carrit0
 <button onclick="addToCart('Conitos para Cascada de Humo x100', 12.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -64,7 +58,6 @@ Agregar al carrito
 <button onclick="addToCart('Sahumo Sagrada Madre', 3.500)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div> 
 <img src="sahumerio.jpg" width="200">
@@ -73,7 +66,6 @@ Agregar al carrito
 <button onclick="addToCart('7 Días de Limpieza Sagrada Madre', 4.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -82,7 +74,6 @@ Agregar al carrito
 <button onclick="addToCart('Palo Santo', 3.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -91,7 +82,6 @@ Agregar al carrito
 <button onclick="addToCart('Carbón Neutro Sagrada Madre x36', 6.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -100,7 +90,6 @@ Agregar al carrito
 <button onclick="addToCart('Velitas', 2.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200"> 
@@ -109,7 +98,6 @@ Agregar al carrito
 <button onclick="addToCart('Veliotas de Noche x12', 3.500)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -118,7 +106,6 @@ Agregar al carrito
 <button onclick="addToCart('Velón de Arcángeles', 12.000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -127,7 +114,6 @@ Agregar al carrito
 <button onclick="addToCart('Rocío Áurico Alquimia', 2.5000)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="sahumerio.jpg" width="200">
@@ -136,7 +122,6 @@ Agregar al carrito
 <button onclick="addToCart('Rocío Áurico Buena Energía', 3.500)">
 Agregar al carrito
 </button>
-</div>
 
 <div class="producto"> <div id="cart"></div>
 <img src="https://github.com/pychulin/cat-logo/blob/main/Roc%C3%ADo%20%C3%81urico.jpg3.jpg" "https://github.com/pychulin/cat-logo/blob/main/Roc%C3%ADo%20%C3%81urico.jpg4.jpg" "https://github.com/pychulin/cat-logo/blob/main/Roc%C3%ADo%20%C3%81urico.jpg"witdh="200">
@@ -164,6 +149,4 @@ Finalizar compra por Instagram 📲
   
 let cart = JSON.parse(localStorage.getItem("cart")) || [];function addToCart(name, price) {cart.push({ name, price });localStorage.setItem("cart", JSON.stringify(cart));alert(name + " agregado al carrito");renderCart();}function renderCart() {const cartContainer = document.getElementById("cart");if (!cartContainer) return;let cart = JSON.parse(localStorage.getItem("cart")) || [];let total = 0;cartContainer.innerHTML = "<h3>🛒 Carrito</h3>";cart.forEach((item, index) => {total += item.price;cartContainer.innerHTML += `<p>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button> </p>`;});cartContainer.innerHTML += `<h4>Total: $${total}</h4>`;}
 
-function removeItem(index) {
-let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}
-</script>
+function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}</script>
