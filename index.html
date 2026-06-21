@@ -1,3 +1,7 @@
+<script>
+function toggleCart() {
+document.getElementById("cart").classList.toggle("open");
+document.getElementById("overlay").classList.toggle("show");}<div id="overlay" onclick="toggleCart()"></div> </body>
 <body>
 <header class="header">
 <h1>Mi Tienda</h1>
@@ -130,8 +134,22 @@ Agregar al carrito
 Agregar al carrito
 </button>
 </div>
-
+  
+<button onclick="clearCart()">
+Vaciar carrito 🗑️
+</button>
+<📲 FINALIZAR COMPRA -->
+<button onclick="checkoutInstagram()">
+Finalizar compra por Instagram 📲
+</button>
 <script>
+/* ===== CARRITO ===== */
+.cart {position: fixed;right: -320px;top: 0;width: 300px;height: 100%;background: white;border-left: 1px solid #ddd; padding: 15px;transition: right 0.3s ease;box-shadow: -5px 0 20px rgba(0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}
+
+/* ===== FONDO OSCURO (OVERLAY) ===== */
+#overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.4);display: none;z-index: 998;}#overlay.show {display: block;}
+</style>  
+  
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(name, price) {
 cart.push({ name, price });
