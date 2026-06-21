@@ -1,3 +1,5 @@
+<script>
+let cart = [];function addToCart(nombre, precio) {cart.push({nombre: nombre,precio: precio});updateCart();}function updateCart() {document.getElementById("cart-count").textContent = cart.length;let cartHTML = "<h3>Productos en el carrito:</h3>";cart.forEach(producto => {cartHTML += `<p>${producto.nombre} - $${producto.precio}</p>`;});document.getElementById("cart-items").innerHTML = cartHTML}</script>
 <body>
 <div id="overlay" onclick="toggleCart()"> </div>
 <script>
@@ -36,8 +38,10 @@ function toggleCart() {document.getElementById("cart").classList.toggle("open");
  <option>Palo Santo con Salvia</option>
 </select>  
 <button onclick="agregarSahumerio()">
-Agregar al carrito
-</button> </div> 
+ Agregar al carrito
+ </button>
+</div>
+<div id="cart-items"> </div>
   
 <h2>Sahumerio Ámbar x20</h2>
 <div class="galeria">
@@ -52,16 +56,20 @@ Agregar al carrito
 <p>Precio: $2000</p>
 </select>  
 <button onclick="agregarSahumerio()">
-Agregar al carrito
-</button>
+ Agregar al carrito
+ </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Sahumerio Surtido x50</h2>
 <img src="surtido.jpg" width="200">
 <p>Precio: $6000</p>
 <button onclick="addToCart('Sahumerio Surtido x50', 6000)">
-Agregar al carrit0
-</button>
+ Agregar al carrito
+ </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto">  
 <h2>Sahumerio Largo Aroma Fusión x10</h2>
@@ -76,8 +84,10 @@ Agregar al carrit0
   <option> Rosa Roja</option>
 <p>Precio: $6500 </p>
 <button onclick="agregarSahumerio()">
-Agregar al carrit0
-</button>
+ Agregar al carrito
+ </button>
+</div>
+<div id="cart-items"> </div>
 
  <div class="producto">
 <h2>Bombita de Defumación Sagrada Madre x4</h2>
@@ -103,22 +113,30 @@ Agregar al carrit0
 </select>  
 <button onclick="agregarSahumerio()"> 
 <p>Precio: $2500</p>
+ Agregar al carrito
+</button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Conitos para Cascada de Humo x100</h2>
 <img src="conito.jpg" width="200"> 
 <p>Precio: $12000</p>
 <button onclick="addToCart('Conitos para Cascada de Humo x100', 12000)">
-Agregar al carrito
-</button>
+ Agregar al carrito
+ </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Sahumo Sagrada Madre</h2>
 <img src="sahumo.jpg" width="200">
 <p>Precio: $3500</p>
 <button onclick="addToCart('Sahumo Sagrada Madre', 3500)">
-Agregar al carrito
+ Agregar al carrito
 </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>7 Días de Limpieza Sagrada Madre </h2>
@@ -126,16 +144,20 @@ Agregar al carrito
 <img src="7.2.jpg" width="200">
 <p>Precio: $4000</p>
 <button onclick="addToCart('7 Días de Limpieza Sagrada Madre', 4000)">
-Agregar al carrito
-</button>
+ Agregar al carrito
+ </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Palo Santo</h2>
 <img src="PS.jpg" width="200">
 <p>Precio: $3000</p>
 <button onclick="addToCart('Palo Santo', 3000)">
-Agregar al carrito
+ Agregar al carrito
 </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Carbón Neutro Sagrada Madre x36 </h2>
@@ -143,8 +165,10 @@ Agregar al carrito
 <img src="c2.jpg" width="200">
 <p>Precio: $6000</p>
 <button onclick="addToCart('Carbón Neutro Sagrada Madre x36', 6000)">
-Agregar al carrito
+ Agregar al carrito
 </button>
+</div>
+ <div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Velitas</h2>
@@ -161,24 +185,30 @@ Agregar al carrito
 <button onclick="agregarSahumerio()">
 <p>Precio: $2000</p>
 <button onclick="addToCart('Velitas', 2000)">
-Agregar al carrito
-</button>
+ Agregar al carrito
+ </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Velitas de Noche x12 </h2>
 <img src="velitanoche.jpg" width="200">
 <p>Precio: $3500</p>
 <button onclick="addToCart('Veliotas de Noche x12', 3500)">
-Agregar al carrito
+ Agregar al carrito
 </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto"> 
 <h2>Velón de Arcángeles </h2>
 <img src="velon.jpg" width="200">  
 <p>Precio: $12000</p>
 <button onclick="addToCart('Velón de Arcángeles', 12000)">
-Agregar al carrito
+ Agregar al carrito
 </button>
+</div>
+<div id="cart-items"> </div>
 
 <div class="producto">
 <h2>Rocío Áurico Alquimia </h2>
@@ -193,6 +223,10 @@ Agregar al carrito
 </select>  
 <button onclick="agregarSahumerio()">
 <p>Precio: $2500</p>
+ Agregar al carrito
+ </button>
+</div>
+ <div id="cart-items"> </div>
 
 <div class="producto">
 <h2>Rocío Áurico Buena Energía </h2>
@@ -216,6 +250,10 @@ Agregar al carrito
 </select>  
 <button onclick="agregarSahumerio()"> 
 <p>Precio: $3500</p>
+ Agregar al carrito
+</button>
+</div>
+ <div id="cart-items"> </div> 
 
 
 <div class="producto">
@@ -232,9 +270,10 @@ Agregar al carrito
 <button onclick="agregarSahumerio()">
 <p>Precio: $12000 </p>
 <button onclick="addToCart('Aromatizante Aero Soft', 12000)">
-Agregar al carrito
-</button>
+ Agregar al carrito
+ </button>
 </div>
+<div id="cart-items"> </div>
   
 <button onclick="clearCart()">
 Vaciar carrito 🗑️
