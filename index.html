@@ -292,7 +292,17 @@ Vaciar carrito 🗑️
 <-- FINALIZAR COMPRA -->
 <button onclick="checkoutInstagram()">
 Finalizar compra por Instagram 📲
-</button> 
-let cart = JSON.parse (localStorage.getItem("cart")) || [];function addToCart(name, price) {cart.push({ name, price });localStorage.setItem("cart", JSON.stringify(cart));alert(name + " agregado al carrito");renderCart();}function renderCart() {const cartContainer = document.getElementById("cart");if (!cartContainer) return;let cart = JSON.parse(localStorage.getItem("cart")) || [];let total = 0;cartContainer.innerHTML = "<h3>🛒 Carrito</h3>";cart.forEach((item, index) => {total += item.price;cartContainer.innerHTML += `<p>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button> </p>`;});cartContainer.innerHTML += `<h4>Total: $${total}</h4>`;}</script>
+</button>
+<a href="https://instagram.com/transformacionalquimica" target="_blank" class="btn-instagram">
+    📷 Comprar por Instagram
+</a>
 
+<style>
+.btn-instagram{display:inline-block;padding:12px 20px;text-decoration:none;border-radius:8px;background:#E1306C;color:white;font-weight:bold;}
+</style>  
+<button onclick="generarPedido()">
+📷 Finalizar pedido por Instagram
+</button>  
+let cart = JSON.parse (localStorage.getItem("cart")) || [];function addToCart(name, price) {cart.push({ name, price });localStorage.setItem("cart", JSON.stringify(cart));alert(name + " agregado al carrito");renderCart();}function renderCart() {const cartContainer = document.getElementById("cart");if (!cartContainer) return;let cart = JSON.parse(localStorage.getItem("cart")) || [];let total = 0;cartContainer.innerHTML = "<h3>🛒 Carrito</h3>";cart.forEach((item, index) => {total += item.price;cartContainer.innerHTML += `<p>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button> </p>`;});cartContainer.innerHTML += `<h4>Total: $${total}</h4>`;}</script>
+function generarPedido() {let texto = "Pedido:\n\n";carrito.forEach(producto => {texto += `${producto.nombre} - $${producto.precio}\n`;});texto += `\nTotal: $${document.getElementById("total").textContent}`;alert(texto);}
 function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}</script>
