@@ -280,7 +280,7 @@ Finalizar compra por Instagram 📲
   
 <style>
 /* ===== CARRITO ===== */
-.cart {position: fixed;right: -320px;top: 0;width: 300px;height: 100%;background: white;border-left: 1px solid #ddd; padding: 15px;transition: right 0.3s ease;box-shadow: -5px 0 20px rgba(0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}</style>
+.cart {position: fixed;right: -320 px;top: 0;width: 300 px;height: 100 %;background: white;border-left: 1 px solid #ddd; padding: 15 px;transition: right 0.3 s ease;box-shadow: -5 px 0 20 px rgba (0,0,0,0.1);z-index: 999;}.cart.open {right: 0;}</style>
  <script> 
 
 <style>
@@ -289,5 +289,6 @@ Finalizar compra por Instagram 📲
 <button onclick="generarPedido()">
 📷 Finalizar pedido por Instagram
 </button>  
- function renderCart() {const lista = document.getElementById("lista-carrito");const totalElemento = document.getElementById("total");const contador = document.getElementById("cart-count");let cart = JSON.parse(localStorage.getItem("cart")) || [];lista.innerHTML = "";let total = 0;cart.forEach((item, index) => {total += item.price;lista.innerHTML += `<li>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button></li>`;});totalElemento.textContent = total;contador.textContent = cart.length;} 
+ function renderCart() {const lista = document.getElementById("lista-carrito");const totalElemento = document.getElementById("total");const contador = document.getElementById("cart-count");let cart = JSON.parse(localStorage.getItem("cart")) || [];lista.innerHTML = ""; let total = 0;cart.forEach((item, index) => {total += item.price;lista.innerHTML += `<li>${item.name} - $${item.price}<button onclick="removeItem(${index})">❌</button></li>`;});totalElemento.textContent = total;contador.textContent = cart.length;} 
 function removeItem(index) {let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.splice(index, 1);localStorage.setItem("cart", JSON.stringify(cart));renderCart();}let cart = JSON.parse(localStorage.getItem("cart")) || [];cart.forEach(producto => {texto += `${producto.nombre} - $${producto.precio}\n`;});
+ 
